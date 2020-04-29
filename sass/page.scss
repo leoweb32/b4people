@@ -1,0 +1,45 @@
+#page-template-page-sobre-php{
+    h2{
+
+    }
+}
+
+#title_serv{
+    min-height: 250px;
+    background-image: url('http://localhost/b4p/wp-content/uploads/2019/06/bg-sobre.jpg');
+    position: relative;
+    padding: 200px 0 105px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    overflow: hidden;
+    z-index: 9;
+
+        h1{
+            font-size: 60px;
+            line-height: 1.1em;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 18px;
+            letter-spacing: -0.02em;
+        }
+}
+
+#quem_somos{
+    background-color: #ECF5F4;
+    display: table;
+
+    #text_quem, .figure_quem{
+        width:50%;
+        float:left;
+        margin: 0;
+    }
+
+    .figure_quem{
+        img{
+            width: 100%;
+        }
+    }
+
+}

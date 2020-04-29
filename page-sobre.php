@@ -2,22 +2,44 @@
 <?php 
 /* template name:Sobre a B4People */
 get_header();
+
+/* Campos */
+$titulo_sobre = get_field('titulo_sobre');
+$descricao_sobre = get_field('descricao_sobre');
+$imagem_sobre = get_field('imagem_sobre');
+$imagem_sobre_url = $imagem_sobre['url'];
+$imagem_sobre_alt = $imagem_sobre['alt'];
+
+$titulo_fazemos = get_field('titulo_fazemos');
+$descricao_fazemos = get_field('descricao_fazemos');
+$imagem_fazemos = get_field('imagem_fazemos');
+$imagem_fazemos_url = $imagem_fazemos['url'];
+$imagem_fazemos_alt = $imagem_fazemos['alt'];
+
 ?>
+
+
 <div id="title_serv">
-    <?php the_title ?>
+    <h1><?php the_title() ?></h1>
 </div>
 <section id="quem_somos">
-    <div id="text_quem"></div>
+    <div id="text_quem">
+        <h2><?php echo $titulo_sobre ?><h2>
+        <?php echo $descricao_sobre ?>
+    </div>
     <figure class="figure_quem">
-        <img src="" alt="">
+        <img src="<?php echo $imagem_sobre_url ?>" alt="<?php echo $imagem_fazemos_alt ?>">
     </figure>
 </section>
 
 <section id="oque_fazemos">
     <figure class="figure_oque">
-        <img src="" alt="">
+        <img src="<?php echo $imagem_fazemos_url ?>" alt="<?php echo $imagem_fazemos_alt ?>">
     </figure>
-    <div id="textoque"></div>
+    <div id="textoque">
+        <h2><?php echo $titulo_fazemos ?></h2>
+        <?php echo $descricao_fazemos ?>
+    </div>
 </section>
 
 <section id="servicos">

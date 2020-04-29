@@ -183,6 +183,7 @@ function ordino_enqueue_scripts() {
     //styles
 	//Basic Style
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.css' );
+	wp_enqueue_style( 'estilo novo', get_template_directory_uri() . '/new_style.css');
 	
 	wp_enqueue_style( 'flaticon', get_template_directory_uri() . '/css/flaticon.css' );
 	//Default Style
