@@ -1,0 +1,4 @@
+[22-Jan-2020 11:46:14 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to undefined function ordino_bunch_global_variable() in /home2/femin385/b4people.com.br/wp-content/themes/ordino/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home2/femin385/b4people.com.br/wp-content/themes/ordino/index.php on line 1
