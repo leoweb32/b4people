@@ -1,9 +1,3 @@
-#page-template-page-sobre-php{
-    h2{
-
-    }
-}
-
 #title_serv{
     min-height: 250px;
     background-image: url('http://localhost/b4p/wp-content/uploads/2019/06/bg-sobre.jpg');
@@ -30,16 +24,53 @@
     background-color: #ECF5F4;
     display: table;
 
+ 
     #text_quem, .figure_quem{
-        width:50%;
-        float:left;
+        width:49.9%;
+        float: left;
         margin: 0;
+        display: table-cell;
+        align-items: center;
+    }
+
+    #text_quem{
+        padding: 5rem;
+        h2{
+            color:$laranja;
+            font-weight: 700;
+        }
     }
 
     .figure_quem{
+        margin: 0;
+        padding: 0;
         img{
             width: 100%;
         }
     }
 
+}
+
+#oque_fazemos{
+    display: table;
+
+    .figure_oque,  #textoque{
+        margin: 0;
+        display: table-cell;
+        align-items: center;
+        width: 49.9%;
+    }
+
+    .figure_oque{
+        img{
+            width: 100%;
+        }
+    }
+    #textoque{
+        padding: 5rem;
+        h2{
+            color:$laranja;
+            font-weight: 700;
+        }
+    }
 }
