@@ -57,27 +57,27 @@ $link = get_permalink($id_ana);
 </section>
 
 <section id="servicos">
-    <h2>Como fazemos</h2>
-    <p>Soluções estruturadas e sistêmicas personalizadas e alinhadas aos
-     objetivos de inclusão, cultura e inovação da sua empresa.</p>
-
-     <?php
-        $posts = get_posts(array(
-            'orderby'   => 'asc',
-                            'post_type' => 'bunch_services',
-                            'posts_per_page' => 4,
-                            'orderby'=>'title',
-                            'order'=>'asc'
-            ));
-            if( $posts ): ?>
- 
-                <ul>
-                    <?php foreach( $posts as $post ): setup_postdata( $post );?>
-                    <?php 
-                        $url_thumb_serv = get_the_post_thumbnail_url();
-                        $descricao_serv = get_field('descricao_serv');
-                        $subtitulo_serv = get_field('subtitulo_serv');
-                    ?> 
+    <div id="intro">
+        <h2>Como fazemos</h2>
+        <p>Soluções estruturadas e sistêmicas personalizadas e alinhadas aos<br>
+        objetivos de inclusão, cultura e inovação da sua empresa.</p>
+    </div>
+            <?php
+                $posts = get_posts(array(
+                    'orderby'   => 'asc',
+                    'post_type' => 'bunch_services',
+                    'posts_per_page' => 4,
+                    'orderby'=>'title',
+                    'order'=>'asc'
+                ));
+                if( $posts ): ?>
+                    <ul class="container">
+                        <?php foreach( $posts as $post ): setup_postdata( $post );?>
+                        <?php 
+                            $url_thumb_serv = get_the_post_thumbnail_url();
+                            $descricao_serv = get_field('descricao_serv');
+                            $subtitulo_serv = get_field('subtitulo_serv');
+                        ?> 
                         <li>
                             <figure>
                                 <img src="<?php echo $url_thumb_serv ?>">
@@ -86,8 +86,8 @@ $link = get_permalink($id_ana);
                             <p><?php echo $descricao_serv ?></p>
                             <button>Saiba mais</button>
                         </li>
-                    <?php endforeach; ?>
-                </ul>
+                        <?php endforeach; ?>
+                    </ul>
                 <?php wp_reset_postdata(); ?>
             <?php endif; ?>
 </section>
@@ -96,14 +96,13 @@ $link = get_permalink($id_ana);
     <div class="container">
         <div id="text_ana">
             <h2><?php echo $ana_titulo;?></h2>
-                <p><?php echo $ana_sobre ?></p>
-                <a href="<?php echo $link ?>">
-                    <button>Conheça mais a Ana</button>
-                </a>    
-            </div>
-            <img src="<?php echo $url_thumb ?>">
+            <p><?php echo $ana_sobre ?></p>
+            <a href="<?php echo $link ?>">
+                <button>Conheça mais a Ana</button>
+            </a>    
+        </div>
+        <img src="<?php echo $url_thumb ?>">
     </div>
-
 </section>
 
 <section id="depoimentos">
@@ -113,36 +112,40 @@ $link = get_permalink($id_ana);
 <section id="equipe">
 
     <div id="text_equipe">
-    <?php 
-      $query = new WP_Query(array( 'pagename' => 'somos-uma-consultoria-em-gestao-das-diversidades-verdadeiramente-diversa' ));
-        if($query->have_posts()){
-            while($query->have_posts()){
-                $query->the_post();?>
+        <div id="align_equipe">    
+            <?php 
+            $query = new WP_Query(array( 'pagename' => 'somos-uma-consultoria-em-gestao-das-diversidades-verdadeiramente-diversa' ));
+                if($query->have_posts()){
+                    while($query->have_posts()){
+                        $query->the_post();?>
 
-                <h2><?php the_title()?></h2>;
-                <?php echo $conteudo = the_content();
-            }
-        }
-    ?>
+                        <h2><?php the_title()?></h2>
+                        <?php echo $conteudo = the_content();
+                    }
+                }
+            ?>
+        </div>    
+
     </div>
     <div id="equipe_list">
     <?php
         $posts = get_posts(array(
             'orderby'   => 'asc',
-                            'post_type' => 'bunch_services',
+                            'post_type' => 'bunch_team',
                             'posts_per_page' => 4,
                             'orderby'=>'title',
                             'order'=>'asc'
             ));
             if( $posts ): ?>
- 
+              
                 <ul>
-                    <?php foreach( $posts as $post ): setup_postdata( $post );?>
-        <div id="equipe_item">
-            <img src="">
-            <span class="label_name"></span>
-        </div>
-     <?php endforeach; ?>
+                    <?php foreach( $posts as $post ): setup_postdata( $post ); ?>
+                    <?php $i++ ?>
+                        <div class="equipe_item item<?php echo $i ?>">
+                            <img src="<?php echo get_the_post_thumbnail_url() ?>" >
+                            <span class="label_name"><?php the_title() ?></span>
+                        </div>
+                    <?php endforeach; ?>
         </div>
         <?php wp_reset_postdata(); ?>
     <?php endif; ?>

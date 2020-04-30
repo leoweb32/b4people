@@ -23,21 +23,22 @@
 #quem_somos{
     background-color: #ECF5F4;
     display: table;
+    vertical-align: middle;
 
  
     #text_quem, .figure_quem{
         width:49.9%;
-        float: left;
         margin: 0;
         display: table-cell;
         align-items: center;
+        vertical-align: middle;
     }
 
     #text_quem{
-        padding: 5rem;
+        padding: 5rem 8rem;
         h2{
             color:$laranja;
-            font-weight: 700;
+            font-weight: 900;
         }
     }
 
@@ -67,10 +68,203 @@
         }
     }
     #textoque{
-        padding: 5rem;
+        padding: 3rem 5rem;
         h2{
             color:$laranja;
-            font-weight: 700;
+            font-weight: 900;
         }
+    }
+}
+
+
+#servicos{
+    background-color: $cinza_claro;
+    padding: 4rem 0 7rem;
+
+    #intro{
+        text-align: center;
+        max-width: 1440px;
+        margin: auto;
+
+        h2{
+            color:$laranja;
+            font-weight: 900;
+        }
+    }
+
+    .container{
+        max-width: 1440px;
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+
+        li{
+            margin: 20px;
+            text-align: center;
+            background-color: #FFF;
+            text-align: center;
+            padding-bottom: 20px;
+            -webkit-box-shadow: 0px 3px 8px -1px rgba(0,0,0,0.46);
+            -moz-box-shadow: 0px 3px 8px -1px rgba(0,0,0,0.46);
+            box-shadow: 0px 3px 8px -1px rgba(0,0,0,0.46);
+
+            h3{
+                color: $verde;
+                font-weight: 700;
+                font-size: 140%;
+            }
+
+
+            p{
+                width:90%;
+                margin: 10px auto;
+                font-size: 90%;
+                line-height: 20px;
+            }
+
+            button{
+                background-color: $laranja;
+                color: #fff;
+                padding: 0.5rem 1rem;
+                border: 0;
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+#sobre_ana{
+    background-image: url(images/bg_sobeana.jpg);
+    background-size: cover;
+    padding: 3rem 0 4rem;
+    display: table;
+    width:100%;
+    position: relative;
+
+    .container{
+        max-width: 1440px;
+        margin: auto;
+
+        #text_ana{
+            float:left;
+            width: 50%;
+            padding: 0 3rem;
+
+            h2{
+                color:$verde;
+                font-weight: 900;
+                margin-bottom: 0;
+            }
+
+            strong{
+                color:$laranja;
+            }
+
+            button{
+                background-color: $laranja;
+                color: #FFF;
+                border: 0;
+                font-size: 110%;
+                padding: 5px 1rem;
+                float: right;
+            }
+        }
+
+        img{
+            float: left;
+            width:30%;
+            position: absolute;
+            right: 5rem;
+            top:-2rem;
+        }
+    }
+}
+
+
+#equipe{
+    background-image: url(images/bg_comeia.jpg);
+    background-size: cover;
+
+    #text_equipe{
+        color:#FFF;
+        background-image: url(images/bg_orange_circle.png);
+        width: 57%;
+        float: left;
+        background-size: 165%;
+        min-height: 750px;
+        padding: 2rem 0;
+        
+        #align_equipe{
+            width: 60%;
+            float:right;
+            margin-right: 10rem;
+            padding: 5rem;
+
+            h2{
+                font-size: 160%;
+                font-weight: 300;
+                text-transform: uppercase;
+                margin-bottom: 3rem;
+    
+                b{
+                    font-size: 150%;
+                    font-weight: 900;
+                    line-height: 30px;
+                    display: block;
+                }
+            }
+        }
+
+        p{
+            color: #FFF;
+        }
+    }
+    #equipe_list{
+        float: left;
+        width:38%;
+        padding: 2rem 0;
+        margin: 0 1rem;
+
+
+        .item2{
+            margin-top: 80px;
+        }
+
+        .item4{
+            margin-top: 56px;
+        }
+
+        .equipe_item{
+            text-align: center;
+            float: left;
+            width: 35%;
+
+
+            img, .label_name{
+                display: table;
+                position: relative;
+            }
+            img{
+                z-index: 0;
+                margin: auto;
+                width: 100%;
+            }
+            .label_name{
+                border-radius: 20px;
+                background-color: $laranja;
+                color: #FFF;
+                padding:  5px 1rem;
+                font-weight: 900;
+                margin: -2rem auto 0;
+                z-index: 10;
+                font-size: 130%;
+                min-width: 150px;
+
+                a{
+                    color:#FFF;
+                }
+            }
+        }
+
+        
     }
 }
