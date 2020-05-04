@@ -209,6 +209,7 @@ function ordino_enqueue_scripts() {
 	
 	//Color Change
 	wp_enqueue_script( 'jquery-ui-core');
+
 	wp_enqueue_script( 'bootstrap', get_template_directory_uri().'/js/bootstrap.min.js', array(), false, true );
 	wp_enqueue_script( 'owl', get_template_directory_uri().'/js/owl.js', array(), false, true );
 	wp_enqueue_script( 'wow', get_template_directory_uri().'/js/wow.js', array(), false, true );

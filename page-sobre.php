@@ -33,12 +33,13 @@ $link = get_permalink($id_ana);
 ?>
 
 
+
 <div id="title_serv">
     <h1><?php the_title() ?></h1>
 </div>
 <section id="quem_somos">
     <div id="text_quem">
-        <h2><?php echo $titulo_sobre ?><h2>
+        <h2><?php echo $titulo_sobre ?></h2>
         <?php echo $descricao_sobre ?>
     </div>
     <figure class="figure_quem">
@@ -59,8 +60,7 @@ $link = get_permalink($id_ana);
 <section id="servicos">
     <div id="intro">
         <h2>Como fazemos</h2>
-        <p>Soluções estruturadas e sistêmicas personalizadas e alinhadas aos<br>
-        objetivos de inclusão, cultura e inovação da sua empresa.</p>
+        <p>Soluções estruturadas e sistêmicas personalizadas e alinhadas aos objetivos de inclusão, cultura e inovação da sua empresa.</p>
     </div>
             <?php
                 $posts = get_posts(array(
@@ -96,7 +96,7 @@ $link = get_permalink($id_ana);
     <div class="container">
         <div id="text_ana">
             <h2><?php echo $ana_titulo;?></h2>
-            <p><?php echo $ana_sobre ?></p>
+            <?php echo $ana_sobre ?>
             <a href="<?php echo $link ?>">
                 <button>Conheça mais a Ana</button>
             </a>    
@@ -104,13 +104,11 @@ $link = get_permalink($id_ana);
         <img src="<?php echo $url_thumb ?>">
     </div>
 </section>
-
 <section id="depoimentos">
-    <div id="clientes"></div>
+    <?php echo do_shortcode('[sp_testimonial id="3870"]'); ?>
 </section>
 
 <section id="equipe">
-
     <div id="text_equipe">
         <div id="align_equipe">    
             <?php 
@@ -151,4 +149,7 @@ $link = get_permalink($id_ana);
     <?php endif; ?>
     </div>
 </section>
+
+
 <?php get_footer(); ?>
+

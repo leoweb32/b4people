@@ -10,6 +10,11 @@
     overflow: hidden;
     z-index: 9;
 
+    @media(max-width:980px){
+         padding:3rem 0 2rem;
+         min-height: 0px;
+    }
+
         h1{
             font-size: 60px;
             line-height: 1.1em;
@@ -17,6 +22,10 @@
             color: #ffffff;
             margin-bottom: 18px;
             letter-spacing: -0.02em;
+
+            @media(max-width:980px){
+                font-size: 246%;
+            }
         }
 }
 
@@ -32,19 +41,42 @@
         display: table-cell;
         align-items: center;
         vertical-align: middle;
+
+        @media(max-width:980px){
+            display: block;
+            width: 100%;
+        }
     }
 
     #text_quem{
         padding: 5rem 8rem;
+
+        @media(max-width:980px){
+            padding: 2rem 3rem;
+
+      }
+
         h2{
             color:$laranja;
             font-weight: 900;
+        }
+        p{
+            width:90%;
+
+            
+            @media(max-width:980px){
+                width: 100%;
+                font-size: 110%;
+                margin-top:1rem;
+                line-height: 22px;
+            }
         }
     }
 
     .figure_quem{
         margin: 0;
         padding: 0;
+
         img{
             width: 100%;
         }
@@ -55,23 +87,46 @@
 #oque_fazemos{
     display: table;
 
+    @media(max-width:980px){
+     position:relative;
+    }
+
     .figure_oque,  #textoque{
         margin: 0;
         display: table-cell;
-        align-items: center;
+        vertical-align: middle;
         width: 49.9%;
+
+        @media(max-width:980px){
+            width: 100%;
+            display: block;
+        }
     }
 
     .figure_oque{
         img{
             width: 100%;
         }
+        @media(max-width:980px){
+            margin-top: 260px;
+        }
     }
     #textoque{
-        padding: 3rem 5rem;
+        padding: 0rem 5rem;
+
+        @media(max-width:980px){
+            padding: 3rem 2rem 1rem;
+            position: absolute;
+            top:0
+        }
+
         h2{
             color:$laranja;
             font-weight: 900;
+        }
+
+        p{
+            width:90%;
         }
     }
 }
@@ -86,6 +141,18 @@
         max-width: 1440px;
         margin: auto;
 
+        @media(max-width:980px){
+            padding: 0 1.5rem;
+
+        }
+
+        p{
+            @media(max-width:980px){
+                font-size: 100%;
+                line-height: 21px;
+            }
+        }
+
         h2{
             color:$laranja;
             font-weight: 900;
@@ -97,8 +164,12 @@
         display: grid;
         grid-template-columns: 25% 25% 25% 25%;
 
+        @media(max-width:980px){
+            grid-template-columns: 100%;
+        }
+
         li{
-            margin: 20px;
+            margin: 10px;
             text-align: center;
             background-color: #FFF;
             text-align: center;
@@ -140,14 +211,25 @@
     width:100%;
     position: relative;
 
+    @media(max-width:980px){
+        background-image: url(images/bg_mob_sobeana.jpg);
+    }
+
     .container{
-        max-width: 1440px;
+        max-width: 1200px;
         margin: auto;
 
         #text_ana{
             float:left;
             width: 50%;
             padding: 0 3rem;
+
+            @media(max-width:980px){
+                width:100%;
+                padding: 0 2rem;
+                margin-top: 240px;
+                text-align: center;
+            }
 
             h2{
                 color:$verde;
@@ -166,44 +248,228 @@
                 font-size: 110%;
                 padding: 5px 1rem;
                 float: right;
+
+                @media(max-width:980px){
+                    float: none;
+                }
             }
         }
 
         img{
-            float: left;
+            float:right;
             width:30%;
             position: absolute;
             right: 5rem;
-            top:-2rem;
+            top:-3rem;
+
+            @media(max-width: 1280px){
+                top:1rem;
+            }
+            
+            @media(max-width: 980px){
+                width:80%;
+                float: none;
+                position: absolute;
+                left: 50%;
+                margin-left: -40%;
+                top: -29px;
+            }
         }
     }
 }
 
+.testimonials {
+    overflow: hidden;
+    position: relative;
+    max-height: 300px;
+  }
+  
+  .testimonials {
+    background: #161d25;
+  }
+  
+  .one-slide,
+  .testimonial,
+  .message {
+    border: none !important;
+    outline: none !important;
+  }
+  
+  .icon-overlay {
+    position: absolute;
+    opacity: 0.3;
+    right: 10%;
+    top: 0;
+    height: auto;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .carousel-controls .control {
+    position: absolute;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    z-index: 1;
+  }
+  
+  .prev {
+    left: -2.25rem;
+  }
+  
+  .next {
+    right: -2.25rem;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .testimonials {
+      max-height: 700px;
+    }
+    .icon-overlay {
+      height: 300px;
+      top: calc(50% - 150px);
+    }
+    .carousel-controls .control {
+      width: 25px;
+      height: 25px;
+      top: inherit;
+    }
+    .prev {
+      left: 0;
+    }
+    .next {
+      right: 0;
+    }
+    .control i {
+      font-size: .7rem;
+    }
+    .testimonials .message {
+      font-size: 1rem;
+    }
+    .testimonials h2 {
+      font-size: 1.5rem;
+    }
+  }
+
+
+#depoimentos{
+    background-color: $verde;
+    padding: 4rem 0;
+    color:#FFF;
+    text-align: left;
+
+    .tfree-client-designation{
+        color:#FFF !important;
+    }
+
+
+    #sp-testimonial-free-wrapper-3870 .sp-testimonial-free-section .slick-prev, #sp-testimonial-free-wrapper-3870 .sp-testimonial-free-section .slick-next{
+        color:#FFF;
+    }
+
+    #sp-testimonial-free-wrapper-3870 .sp-testimonial-free-section .tfree-client-name{
+        margin-bottom: 0;
+    }
+
+    .tfree-client-rating{
+        display: none !important;   
+    }
+
+    .sp-testimonial-free-section .tfree-testimonial-title h3{
+        font-size: 200% !important;
+        font-weight: 900;
+    }
+
+    .sp-testimonial-free-wrapper{
+        max-width: 980px;
+        margin: auto;
+
+        p{
+            color:#FFF;
+        }
+    
+        .tfree-testimonial-content{
+            color:#FFF !important;
+    
+            .tfree-testimonial-title{
+                font-size: 200%;
+                h3{
+                    color:$amarelo !important;
+                    font-size: 200%;
+                }
+            }
+            .tfree-client-name{
+                color:$amarelo !important;
+            }
+        }
+    }
+}
 
 #equipe{
     background-image: url(images/bg_comeia.jpg);
     background-size: cover;
+    display: table;
 
     #text_equipe{
         color:#FFF;
         background-image: url(images/bg_orange_circle.png);
         width: 57%;
         float: left;
-        background-size: 165%;
-        min-height: 750px;
-        padding: 2rem 0;
-        
+        background-size: 165% 100%;
+        padding: 5rem 0;
+
+
+        @media(max-width:980px){
+            background-image: url(images/bg_mob_orange_circle.png);
+            display: block;
+            float: none;
+            background-size: 100% 122%;
+            display: table;
+            padding: 2rem 0 !important;
+            position: relative;
+        }
+
+        @media(max-width:1440px){
+            padding: 1rem 0;
+        }
+        @media(max-width:1280px){
+            width: 60%;
+        }
+
         #align_equipe{
             width: 60%;
             float:right;
             margin-right: 10rem;
             padding: 5rem;
 
+            @media(max-width:980px){
+                width:100% !important;
+                padding: 2rem 2rem 5rem !important;
+                float: none !important;
+                margin: 0 !important;
+
+
+            }
+            
+            @media(max-width:1440px){
+                width: 67%;
+            }
+            @media(max-width:1280px){
+                width:80%;
+            }
+            
+
             h2{
                 font-size: 160%;
                 font-weight: 300;
                 text-transform: uppercase;
                 margin-bottom: 3rem;
+
+                @media(max-width:980px){
+                    font-size: 137%;
+                }
     
                 b{
                     font-size: 150%;
@@ -221,8 +487,25 @@
     #equipe_list{
         float: left;
         width:38%;
-        padding: 2rem 0;
+        padding: 3rem 0;
         margin: 0 1rem;
+
+        @media(max-width:1440px){
+            margin: 0 0 0 4rem;
+        }
+        
+        @media(max-width:1280px){
+            margin: 0 0 0 2rem;
+            width:37%;
+        }
+
+        @media(max-width:980px){
+            width:90%;
+            float: none;
+            margin: -7rem auto 0;
+            padding: 0 0 3rem;
+            display: table;
+        }
 
 
         .item2{
@@ -237,6 +520,10 @@
             text-align: center;
             float: left;
             width: 35%;
+
+            @media(max-width:980px){
+                width: 47%;
+            }
 
 
             img, .label_name{
