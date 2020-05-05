@@ -84,7 +84,7 @@ $link = get_permalink($id_ana);
                             </figure>
                             <h3><?php the_title() ?></h3>
                             <p><?php echo $descricao_serv ?></p>
-                            <button>Saiba mais</button>
+                            <a href="<?php echo get_permalink() ?>"><button>Saiba mais</button></a>
                         </li>
                         <?php endforeach; ?>
                     </ul>
