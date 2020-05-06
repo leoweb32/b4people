@@ -90,6 +90,17 @@ $link = get_permalink($id_ana);
                     </ul>
                 <?php wp_reset_postdata(); ?>
             <?php endif; ?>
+                    <div id="cert">
+                        <div id="text_cert">
+                            Nossos valores em D&I estão alinhados com a metodologia interseccional Gender-based
+                            Analysis + e frameworks for equality da ONU.
+                        </div>
+                        <div id="brand_cert">
+                        <img src="<?php echo get_theme_file_uri( )?>/images/gba_logo.png" alt="GBA">
+                        <img src="<?php echo get_theme_file_uri( )?>/images/onu_mulheres.png" alt="Onu mulheres">
+                        </div>
+                    </div>
+
 </section>
 
 <section id="sobre_ana">
@@ -107,6 +118,19 @@ $link = get_permalink($id_ana);
 <section id="depoimentos">
     <?php echo do_shortcode('[sp_testimonial id="3870"]'); ?>
 </section>
+<div id="clientes">
+    <div id="float_client">
+        <?php 
+            $query = new WP_Query(array( 'pagename' => 'clientes' ));
+                if($query->have_posts()){
+                    while($query->have_posts()){
+                        $query->the_post();?>
+                        <?php echo $conteudo = the_content();
+                    }                            
+                }
+        ?>
+    </div>
+</div>
 
 <section id="equipe">
     <div id="text_equipe">
@@ -119,7 +143,7 @@ $link = get_permalink($id_ana);
 
                         <h2><?php the_title()?></h2>
                         <?php echo $conteudo = the_content();
-                    }
+                    }                            
                 }
             ?>
         </div>    

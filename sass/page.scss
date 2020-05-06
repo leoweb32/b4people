@@ -2,7 +2,7 @@
     min-height: 250px;
     background-image: url('http://localhost/b4p/wp-content/uploads/2019/06/bg-sobre.jpg');
     position: relative;
-    padding: 200px 0 105px;
+    padding: 200px 0 80px;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -201,6 +201,27 @@
             }
         }
     }
+
+    #cert{
+        max-width:800px;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        margin: 2rem auto 0;
+
+        @media(max-width:980px){
+            grid-template-columns: 100%;
+            max-width: 90%;
+            text-align: center;
+        }
+
+        #brand_cert{
+            img{
+                width:45%;
+                display: inline-block;
+            }
+        }
+
+    }
 }
 
 #sobre_ana{
@@ -278,6 +299,8 @@
     }
 }
 
+
+
 .testimonials {
     overflow: hidden;
     position: relative;
@@ -353,10 +376,11 @@
     }
   }
 
+  
 
 #depoimentos{
     background-color: $verde;
-    padding: 4rem 0;
+    padding: 4rem 0 10rem;
     color:#FFF;
     text-align: left;
 
@@ -407,6 +431,61 @@
     }
 }
 
+
+#clientes{
+    position: relative;
+    height: 0;
+
+    @media(max-width:980px){
+        height: auto;
+    }
+
+    #float_client{
+        position: absolute;
+        background-color: #FFF;
+        border-radius: 100px;
+        padding: 1rem 2rem 0rem;
+        max-width: 800px;
+        left: 50%;
+        margin-left: -400px;
+        top:-140px;
+        text-align: center;
+
+        @media(max-width:980px){
+        position: relative;
+        max-width: 100%;
+        left: 0;
+        margin-left: 0;
+        padding: 0.5rem;
+        top: 0;
+        }
+
+        .blocks-gallery-grid{
+            width:100%;
+            margin: auto;
+            display: table;
+            li{
+                width: 20%;
+                vertical-align: baseline;
+                display: table-cell;
+                border: 15px solid #fff;
+
+
+                @media(max-width:980px){
+                    width: 45%;
+                    display: inline-block;
+                }
+
+                img{
+                    width:100%
+                }
+            }
+
+        }
+    }
+}
+
+
 #equipe{
     background-image: url(images/bg_comeia.jpg);
     background-size: cover;
@@ -429,6 +508,7 @@
             display: table;
             padding: 2rem 0 !important;
             position: relative;
+            width:100% !important;
         }
 
         @media(max-width:1440px){
@@ -484,6 +564,8 @@
             color: #FFF;
         }
     }
+
+
     #equipe_list{
         float: left;
         width:38%;
