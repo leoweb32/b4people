@@ -68,7 +68,14 @@ $link = get_permalink($id_ana);
                     'post_type' => 'bunch_services',
                     'posts_per_page' => 4,
                     'orderby'=>'title',
-                    'order'=>'asc'
+                    'order'=>'asc',
+                    'tax_query' => array(
+                        array(
+                            'taxonomy' => 'services_category',
+                            'field' => 'term_id',
+                            'terms' => 67,
+                        )
+                    )
                 ));
                 if( $posts ): ?>
                     <ul class="container">
@@ -115,22 +122,9 @@ $link = get_permalink($id_ana);
         <img src="<?php echo $url_thumb ?>">
     </div>
 </section>
-<section id="depoimentos">
-    <?php echo do_shortcode('[sp_testimonial id="3870"]'); ?>
-</section>
-<div id="clientes">
-    <div id="float_client">
-        <?php 
-            $query = new WP_Query(array( 'pagename' => 'clientes' ));
-                if($query->have_posts()){
-                    while($query->have_posts()){
-                        $query->the_post();?>
-                        <?php echo $conteudo = the_content();
-                    }                            
-                }
-        ?>
-    </div>
-</div>
+<!--section id="depoimentos">
+    <?php // echo do_shortcode('[sp_testimonial id="3870"]'); ?>
+</section-->
 
 <section id="equipe">
     <div id="text_equipe">

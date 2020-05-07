@@ -7,17 +7,27 @@
 
     #intro_serv{
         position: relative;
+        
         #text_serv{
-            h2{
-                color:#4CA4A5;
-                font-weight: 900;
-                margin-bottom: 20px;
-            }
-
             float: left;
             width:50%;
             padding: 5rem 8rem 2rem;
 
+            
+            li{
+                font-weight: 600;
+                font-size: 110%;
+                line-height: 25px;
+            }
+
+            @media(max-width:1440px){
+                padding: 4rem 3rem;
+
+                p{
+                    font-size: 96%;
+                }
+
+            }
             @media(max-width:980px){
                 width: 90%;
                 margin: auto;
@@ -26,6 +36,13 @@
                 text-align: center;
                 float:none;
                 padding-top: 289px;
+            }
+
+
+            h2{
+                color:#4CA4A5;
+                font-weight: 900;
+                margin-bottom: 20px;
             }
         }
         figure{
@@ -329,3 +346,4 @@
     }
 
 }
+

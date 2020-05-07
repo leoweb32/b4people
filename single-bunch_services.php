@@ -119,6 +119,10 @@ if($passos_serv){
     </div>
 
 </section>    
+
+
+            
+</section>
 <section id="servicos">
     <div id="intro">
         <h2>Como fazemos</h2>
@@ -130,7 +134,14 @@ if($passos_serv){
                     'post_type' => 'bunch_services',
                     'posts_per_page' => 4,
                     'orderby'=>'title',
-                    'order'=>'asc'
+                    'order'=>'asc',
+                    'tax_query' => array(
+                        array(
+                            'taxonomy' => 'services_category',
+                            'field' => 'term_id',
+                            'terms' => 67,
+                        )
+                    )
                 ));
                 if( $posts ): ?>
                     <ul class="container">
